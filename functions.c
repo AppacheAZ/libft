@@ -7,7 +7,6 @@ int ft_isalpha(int c){
     }
     else
         return 0;
-
 }
 
 int ft_isdigit(int c){
