@@ -1,6 +1,6 @@
 # Variables
-CC = gcc
-CFLAGS = -Wall -Wextra
+CC =gcc
+CFLAGS =-Wall -Werror -Wextra
 
 # Regla para el objetivo principal
 all: libft
