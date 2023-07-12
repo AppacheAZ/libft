@@ -1,13 +1,13 @@
 # Variables
-NAME=libft.a
-INCLUDE=libft.h
+NAME = libft.a
+INCLUDE = libft.h
 #ar (r se agregan archivs .o a la bibioteca, c se crea la biblioteca, s se actualiza el indice)
-LIB=ar rcs
-CC =gcc
-CFLAGS =-Wall -Werror -Wextra
-DIR=./
+LIB = ar rcs
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra
+DIR = ./
 
-FILES = ft_isalpha ft_isdigit
+FILES = ft_isalpha ft_isdigit ft_isalnum ft_isascii ft_isprint ft_strlen ft_memset
 
 SOURCES=$(addprefix $(DIR)/, $(addsuffix .c, $(FILES)))
 OBJECTS=$(addprefix $(DIR)/, $(addsuffix .o, $(FILES)))
@@ -17,7 +17,7 @@ all:$(NAME)
 
 # Regla para crear los archivos objeto
 .c.o: $(SOURCES)
-	$(CC) $(CFLAGS) -c $<
+	$(CC) $(CFLAGS) -c $< -o $@
 
 # Regla para el programa principal
 $(NAME): $(OBJECTS) $(INCLUDE)
@@ -25,7 +25,7 @@ $(NAME): $(OBJECTS) $(INCLUDE)
 
 # Limpieza
 clean:
-	rm -f libft *.o
+	rm -f $(NAME) *.o
 
 fclean: clean
 	rm -f $(NAME)
