@@ -7,7 +7,8 @@ CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 DIR = ./
 
-FILES = ft_isalpha ft_isdigit ft_isalnum ft_isascii ft_isprint ft_strlen ft_memset
+FILES = ft_isalpha ft_isdigit ft_isalnum ft_isascii ft_isprint ft_strlen ft_memset ft_bzero \
+		ft_memcpy
 
 SOURCES=$(addprefix $(DIR)/, $(addsuffix .c, $(FILES)))
 OBJECTS=$(addprefix $(DIR)/, $(addsuffix .o, $(FILES)))
