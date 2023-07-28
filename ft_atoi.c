@@ -11,14 +11,14 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	while (nptr[i] == ' ' || (nptr[i] >= '\t' && nptr[i] <= '\r'))
 		i++;
-	if (nptr[i] == '-') 
+	if (nptr[i] == '-')
 	{
 		clip = -1;
 		i++;
 	}
 	else if (nptr[i] == '+')
 		i++;
-	while (nptr[i] >= '0' && nptr[i] <= '9') 
+	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		return_value = return_value * 10 + (nptr[i] - '0');
 		i++;
