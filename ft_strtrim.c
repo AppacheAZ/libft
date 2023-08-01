@@ -9,6 +9,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	j = 0;
+	if (!s1 || !set)
+		return (NULL);
 	size = ft_strlen(s1);
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
@@ -18,11 +20,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!str || !set || !s1)
 		return (NULL);
 	while (i < size)
-	{
-		str[j] = s1[i];
-		i++;
-		j++;
-	}
+		str[j++] = s1[i++];
 	str[j] = '\0';
 	return (str);
 }
